@@ -1,0 +1,20 @@
+var formEl = document.getElementById(”calculator”);
+var sum = 
+parseInt(formEl.getElemenysByTagName('INPUT')[0].value)
+ + parseInt(formEl.getElemenysByTagName('INPUT')[1].value);
+document.getElementById(”result”).textContent = sum;
+
+////////////
+SELECT `offices`.`name` FROM `offices`
+JOIN `firms`
+ON `offices`.`id_firm` = `firms`.`id`
+WHERE `firms`.`name` LIKE `%www%`
+GROUP BY `offices`.`name`
+
+SELECT `offices`.`name` FROM `offices` JOIN `firms` ON `offices`.`id_firm` = `firms`.`id` WHERE `firms`.`name` LIKE '%www%'  
+
+SELECT `offices`.`name` FROM `offices` JOIN `firms` ON `offices`.`id_firm` = `firms`.`id` JOIN `cities` ON `offices`.`id_city` = `cities`.`id` WHERE `firms`.`id` = 1 AND `cities`.`id` = 1  
+
+SELECT `firms`.`name` FROM `firms` JOIN `offices` ON `firms`.`id` = `offices`.`id_firm` JOIN `cities` ON `offices`.`id_city` = `cities`.`id` WHERE `cities`.`id` = 1 GROUP BY `firms`.`name`
+
+SELECT * FROM `profile` ORDER BY user_id DESC LIMIT 4,1 
